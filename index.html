@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WiFi Signal Wave Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.158.0/build/three.module.js"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="app">
+        <div id="controls">
+            <h1>WiFi Signal Wave Simulator</h1>
+            <div class="control-group">
+                <label>Frequency:</label>
+                <input type="range" id="frequencySlider" min="1" max="10" step="0.1" value="5">
+                <span id="frequencyValue">5 GHz</span>
+            </div>
+            <div class="control-group">
+                <label>Signal Strength:</label>
+                <input type="range" id="strengthSlider" min="0" max="100" value="75">
+                <span id="strengthValue">75%</span>
+            </div>
+            <div class="control-group">
+                <label>Wave Type:</label>
+                <select id="waveTypeSelect">
+                    <option value="sine">Sine Wave</option>
+                    <option value="square">Square Wave</option>
+                    <option value="triangle">Triangle Wave</option>
+                </select>
+            </div>
+            <button id="simulateBtn">Simulate Wave</button>
+        </div>
+        <div id="visualizer"></div>
+    </div>
+    <script type="module" src="script.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
